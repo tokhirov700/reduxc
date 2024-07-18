@@ -1,15 +1,28 @@
 const initialState = {
-    email : null
-}
+    products: [],
+    cart: []
+};
 
 const reducer = (state = initialState, action) => {
     switch (action.type) {
-        case "CHANGE_EMAIL":
+        case "SET_PRODUCTS":
             return {
-                email: action.email
-            }
+                ...state,
+                products: action.products
+            };
+        case "ADD_TO_CART":
+            return {
+                ...state,
+                cart: [...state.cart, action.product]
+            };
+        case "REMOVE_FROM_CART":
+            return {
+                ...state,
+                cart: state.cart.filter(item => item.id !== action.product.id)
+            };
         default:
-            return state
+            return state;
     }
-}
-export default reducer
+};
+
+export default reducer;
