@@ -1,17 +1,17 @@
-import React from 'react'
+import React from 'react';
 import { NavLink } from 'react-router-dom';
+import './Navbar.css'; 
 
 const Navbar = () => {
   return (
     <header>
-      <h1>Redux Toolkit</h1>
-      <hr />
       <div className="wrapper">
-        <NavLink to="/">Home</NavLink>
-        <NavLink to="/product">Product</NavLink>
+        <NavLink exact to="/" activeClassName="active">Home</NavLink>
+        <NavLink to="/product" activeClassName="active">Product</NavLink>
       </div>
+      <hr />
     </header>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

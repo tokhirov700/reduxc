@@ -2,9 +2,10 @@
 
 .product-container {
     display: flex;
-    gap: 16px;
-
+    gap: 26px;
+    justify-content: center;
     flex-wrap: wrap;
+    margin-top: 40px;
   }
   
   .product-card {
@@ -32,6 +33,7 @@
   
   .product-card p {
     color: #555;
+    margin: 7px 0;
   }
   
   .product-card button {

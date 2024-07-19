@@ -16,7 +16,7 @@ const Product = () => {
     <div className="cart-container">
       <h2>Cart</h2>
       {cart.length === 0 ? (
-        <p>No items in cart.</p>
+        <p className="empty-cart">No items in cart.</p>
       ) : (
         cart.map((item, index) => (
           <div className="cart-item" key={index}>

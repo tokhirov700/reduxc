@@ -25,7 +25,7 @@ const Home = () => {
       {products.map(product => (
         <div className="product-card" key={product.id}>
           <img src={product.image} alt={product.title} />
-          <h3>{product.title.slice(0,15)}</h3>
+          <h3>{product.title.slice(0,10)}</h3>
           <p>{product.description.slice(0,15)}</p>
           <p>${product.price}</p>
           <button onClick={() => handleAddToCart(product)}>Add to Cart</button>
